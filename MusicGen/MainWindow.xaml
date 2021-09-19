@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Generate" Click="Button_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="NumOfNotes" Grid.Row="0" Text="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox x:Name="TypeOfGen" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectedIndex="0">
+            <TextBlock x:Name="_1">1</TextBlock>
+            <TextBlock>2</TextBlock>
+            <TextBlock>3</TextBlock>
+        </ComboBox>
+        <Button Grid.Row="2" Content="Generate" Click="Button_Click"/>
     </Grid>
 </Window>

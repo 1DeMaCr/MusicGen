@@ -31,12 +31,12 @@ namespace MusicGen
         {
             int prevNote = 4;
             int curNote;
-            int numOfNotes = 10;
+            int numOfNotes = Int32.Parse(NumOfNotes.Text);
             Notes noteGen = new Notes();
             notes = noteGen.NumToNote(prevNote);
             for(int i = 0; i < numOfNotes; i++)
             {
-                curNote = noteGen.NoteGen(prevNote);
+                curNote = noteGen.NoteGen(prevNote, Int32.Parse(((TextBlock)TypeOfGen.SelectedItem).Text));
                 notes = notes + " " + noteGen.NumToNote(curNote);
                 prevNote = curNote;
             }
